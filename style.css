@@ -231,3 +231,20 @@ footer {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+.hero {
+    height: 90vh;
+    background: linear-gradient(135deg, #0c0c0c 0%, #330b0f 50%, #8E4D05 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(233,203,154,0.15); /* reflexos dourados sutis */
+}
