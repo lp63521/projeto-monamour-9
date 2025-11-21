@@ -1,98 +1,141 @@
-/* ===========================
-   ESTILO GERAL
-=========================== */
+/* ======================================================
+   ESTILO GERAL – MONAMOUR SECRETS
+====================================================== */
 
 :root {
-    --vermelho-profundo: #991E27;
+    --vinho-profundo: #991E27;
     --preto: #000000;
-    --dourado-antique: #E9CB9A;
-    --bronze-escuro: #8E4D05;
+    --dourado: #E9CB9A;
+    --bronze: #8E4D05;
     --burgundy: #4C0F15;
     --gold-elegante: #C9A86A;
+    --fundo-escuro: #0c0c0c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
     font-family: "Cinzel", serif;
     background-color: var(--preto);
-    color: var(--dourado-antique);
+    color: var(--dourado);
     overflow-x: hidden;
 }
 
-/* ----------------------------
+/* ======================================================
    CABEÇALHO
----------------------------- */
+====================================================== */
 
 header {
     width: 100%;
-    background: linear-gradient(90deg, var(--bronze-escuro), var(--dourado-antique));
     padding: 15px 40px;
+    background: linear-gradient(90deg, var(--bronze), var(--dourado));
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
-header img.logo {
+.logo {
     width: 140px;
 }
 
 nav a {
-    margin: 0 15px;
+    margin: 0 18px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: bold;
     color: var(--preto);
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 
 nav a:hover {
-    color: var(--vermelho-profundo);
+    color: var(--vinho-profundo);
 }
 
-/* ----------------------------
+/* ======================================================
+   MOBILE MENU
+====================================================== */
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: var(--bronze);
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav a {
+        color: var(--preto);
+        padding: 10px 0;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: var(--preto);
+    }
+}
+
+/* ======================================================
    HERO
----------------------------- */
+====================================================== */
 
 .hero {
-    height: 80vh;
-    background: url('assets/bg.jpg') center/cover no-repeat;
+    height: 90vh;
+    background: url('assets/bg-hero.jpg') center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
-    padding-left: 60px;
+    padding-left: 50px;
+    overflow: hidden;
 }
 
 .hero::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.55);
 }
 
 .hero-content {
     position: relative;
-    max-width: 600px;
+    color: var(--dourado);
+    max-width: 550px;
+    animation: fadeIn 2s ease;
 }
 
 .hero h1 {
-    font-size: 58px;
-    color: var(--dourado-antique);
-    text-shadow: 0 0 10px var(--bronze-escuro);
+    font-size: 60px;
+    text-shadow: 0 0 10px var(--bronze);
 }
 
 .hero p {
     font-size: 22px;
-    color: #fff;
+    margin-top: 10px;
 }
 
 .btn {
-    display: inline-block;
-    background: var(--vermelho-profundo);
+    background: var(--vinho-profundo);
     color: #fff;
     padding: 12px 28px;
     border-radius: 8px;
-    margin-top: 20px;
-    font-weight: bold;
+    display: inline-block;
     text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
     transition: 0.3s;
 }
 
@@ -100,27 +143,91 @@ nav a:hover {
     background: var(--burgundy);
 }
 
-/* ----------------------------
-   SEÇÕES PADRÃO
----------------------------- */
+/* ======================================================
+   SEÇÕES
+====================================================== */
 
 section {
-    padding: 60px 80px;
+    padding: 80px 70px;
 }
 
 section h2 {
-    font-size: 38px;
-    color: var(--gold-elegante);
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px var(--bronze);
 }
 
-/* ----------------------------
+/* ======================================================
+   CARTÕES DE PRODUTO
+====================================================== */
+
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.produto {
+    width: 280px;
+    background: #111;
+    border: 1px solid var(--gold-elegante);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+.btn-add {
+    display: block;
+    margin-top: 12px;
+    padding: 10px;
+    background: var(--vinho-profundo);
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-add:hover {
+    background: var(--burgundy);
+}
+
+/* ======================================================
    RODAPÉ
----------------------------- */
+====================================================== */
 
 footer {
-    background: var(--burgundy);
-    padding: 20px;
-    color: var(--dourado-antique);
     text-align: center;
-    margin-top: 40px;
+    padding: 20px;
+    background: var(--burgundy);
+    color: var(--dourado);
+}
+
+/* ======================================================
+   ANIMAÇÕES
+====================================================== */
+
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
