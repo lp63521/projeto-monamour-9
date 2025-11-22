@@ -29,3 +29,25 @@ window.addEventListener("scroll", () => {
         if (top < trigger) el.classList.add("show");
     });
 });
+
+// Seleciona todos elementos com a classe .fade
+const faders = document.querySelectorAll('.fade');
+
+// Função para ativar a animação usando Intersection Observer
+const appearOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+    });
+}, appearOptions);
+
+// Observa todos elementos fade
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
