@@ -231,3 +231,38 @@ footer {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+/* Container das imagens */
+.imagens-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Cada imagem */
+.imagem-item img {
+    width: 250px;
+    border-radius: 12px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+}
+
+/* Efeito hover: zoom + sombra elegante */
+.imagem-item img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(233, 203, 154, 0.4);
+}
+
+/* Animação de fade-in suave ao aparecer na tela */
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
