@@ -30,7 +30,7 @@ body {
 /* === CABEÇALHO === */
 header {
     width: 100%;
-    padding: 15px 40px;
+    padding: 30px 50px;
     background: linear-gradient(80deg, var(--preto), var(--vinho-profundo));
     display: flex;
     justify-content: space-between;
