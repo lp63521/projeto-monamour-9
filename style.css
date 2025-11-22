@@ -1,7 +1,4 @@
-/* ======================================================
-   ESTILO GERAL – MONAMOUR SECRETS
-====================================================== */
-
+/* === VARIÁVEIS DE COR === */
 :root {
     --vinho-profundo: #991E27;
     --preto: #000000;
@@ -9,9 +6,9 @@
     --bronze: #8E4D05;
     --burgundy: #4C0F15;
     --gold-elegante: #C9A86A;
-    --fundo-escuro: #0c0c0c;
 }
 
+/* === RESET === */
 * {
     margin: 0;
     padding: 0;
@@ -25,10 +22,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ======================================================
-   CABEÇALHO
-====================================================== */
-
+/* === CABEÇALHO === */
 header {
     width: 100%;
     padding: 15px 40px;
@@ -54,10 +48,6 @@ nav a:hover {
     color: var(--vinho-profundo);
 }
 
-/* ======================================================
-   MOBILE MENU
-====================================================== */
-
 .menu-toggle {
     display: none;
     font-size: 30px;
@@ -74,11 +64,6 @@ nav a:hover {
         text-align: center;
     }
 
-    nav a {
-        color: var(--preto);
-        padding: 10px 0;
-    }
-
     nav.active {
         display: flex;
     }
@@ -89,10 +74,7 @@ nav a:hover {
     }
 }
 
-/* ======================================================
-   HERO - FUNDO SIMULADO
-====================================================== */
-
+/* === HERO COM FUNDO SIMULADO === */
 .hero {
     height: 90vh;
     background: linear-gradient(135deg, #0c0c0c 0%, #330b0f 50%, #8E4D05 100%);
@@ -107,14 +89,13 @@ nav a:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(233,203,154,0.15); /* reflexos dourados sutis */
+    background: rgba(233,203,154,0.15);
 }
 
 .hero-content {
     position: relative;
     color: var(--dourado);
     max-width: 550px;
-    animation: fadeIn 2s ease;
 }
 
 .hero h1 {
@@ -143,10 +124,7 @@ nav a:hover {
     background: var(--burgundy);
 }
 
-/* ======================================================
-   SEÇÕES
-====================================================== */
-
+/* === GALERIA DE PRODUTOS === */
 section {
     padding: 80px 70px;
 }
@@ -157,82 +135,6 @@ section h2 {
     text-shadow: 0 0 8px var(--bronze);
 }
 
-/* ======================================================
-   CARTÕES DE PRODUTO
-====================================================== */
-
-.produtos-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.produto {
-    width: 280px;
-    background: #111;
-    border: 1px solid var(--gold-elegante);
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    transition: 0.4s;
-}
-
-.produto img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.produto:hover {
-    transform: scale(1.05);
-}
-
-.btn-add {
-    display: block;
-    margin-top: 12px;
-    padding: 10px;
-    background: var(--vinho-profundo);
-    color: #fff;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn-add:hover {
-    background: var(--burgundy);
-}
-
-/* ======================================================
-   RODAPÉ
-====================================================== */
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: var(--burgundy);
-    color: var(--dourado);
-}
-
-/* ======================================================
-   ANIMAÇÕES
-====================================================== */
-
-.fade {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: 1s;
-}
-
-.fade.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* Container das imagens */
 .imagens-container {
     display: flex;
     flex-wrap: wrap;
@@ -241,7 +143,6 @@ footer {
     margin-top: 40px;
 }
 
-/* Cada imagem */
 .imagem-item img {
     width: 250px;
     border-radius: 12px;
@@ -249,13 +150,20 @@ footer {
     cursor: pointer;
 }
 
-/* Efeito hover: zoom + sombra elegante */
 .imagem-item img:hover {
     transform: scale(1.08);
     box-shadow: 0 10px 25px rgba(233, 203, 154, 0.4);
 }
 
-/* Animação de fade-in suave ao aparecer na tela */
+/* === RODAPÉ === */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--burgundy);
+    color: var(--dourado);
+}
+
+/* === ANIMAÇÕES === */
 .fade {
     opacity: 0;
     transform: translateY(20px);
@@ -266,3 +174,4 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
