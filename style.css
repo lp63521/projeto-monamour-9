@@ -38,7 +38,8 @@ header {
 }
 
 .logo {
-    width: 10px;
+    width: 1000%;
+    padding: 15px 40px
 }
 
 nav a {
