@@ -38,9 +38,9 @@ header {
 }
 
 .logo-container img {
-    width: 150px;
+    width: 100px;
     height: auto;
-    padding: 20px 30px
+    padding: 20px 50px
 }
 
 nav a {
