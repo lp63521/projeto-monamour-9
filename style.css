@@ -31,7 +31,7 @@ body {
 header {
     width: 100%;
     padding: 15px 40px;
-    background: linear-gradient(90deg, var(--gold-elegante), var(--vinho-profundo));
+    background: linear-gradient(90deg, var(--preto), var(--vinho-profundo));
     display: flex;
     justify-content: space-between;
     align-items: center;
