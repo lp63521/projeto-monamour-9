@@ -16,7 +16,12 @@
 }
 
 body {
-    font-family: "Cinzel", serif;
+.pinyon-script-regular {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
     background-color: var(--preto);
     color: var(--dourado);
     overflow-x: hidden;
