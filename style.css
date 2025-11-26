@@ -37,10 +37,10 @@ header {
     align-items: center;
 }
 
-.logo-container img {
-    width: 100px;
+.logo {
+    width: 20px;
     height: auto;
-    padding: 20px 50px
+
 }
 
 nav a {
